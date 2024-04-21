@@ -1,0 +1,65 @@
+/* Styles for the traffic light */
+.traffic-light {
+    width: 100px;
+    height: 300px;
+    background-color: #333;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  /* Styles for the lights */
+  .traffic-light .light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px auto;
+    background-color: #111; /* Default color for lights */
+    transition: background-color 0.5s ease; /* Transition for smooth color change */
+  }
+  
+  /* Keyframe animation for red */
+  @keyframes red-glow {
+    0%, 33.3% {
+      background-color: #a50055; /* Red */
+    }
+    33.4%, 100% {
+      background-color: #111; /* Default color */
+    }
+  }
+  
+  /* Keyframe animation for yellow */
+  @keyframes yellow-glow {
+    0%, 33.3% {
+      background-color: #111; /* Default color */
+    }
+    33.4%, 66.6% {
+      background-color: #e09a37; /* Yellow */
+    }
+    66.7%, 100% {
+      background-color: #111; /* Default color */
+    }
+  }
+  
+  /* Keyframe animation for green */
+  @keyframes green-glow {
+    0%, 66.6% {
+      background-color: #111; /* Default color */
+    }
+    66.7%, 100% {
+      background-color: #00805a; /* Green */
+    }
+  }
+  
+  /* Apply animations to lights */
+  .red.light {
+    animation: red-glow 6s infinite; /* Apply animation to red light */
+  }
+  
+  .yellow.light {
+    animation: yellow-glow 6s infinite; /* Apply animation to yellow light */
+  }
+  
+  .green.light {
+    animation: green-glow 6s infinite; /* Apply animation to green light */
+  }
+  
